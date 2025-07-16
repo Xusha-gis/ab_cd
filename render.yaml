@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: telegram_premium_bot
+    name: premium-bot
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python3 -m app.main
     plan: free
-    autoDeploy: true
+    pythonVersion: 3.11.10       # <<< Mana shu qatorda Python 3.11 da quriladi
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
