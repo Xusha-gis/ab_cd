@@ -43,8 +43,13 @@ async def start(message: Message):
     keyboard = [[{"text": btn[0]}] for btn in buttons]
 
     await message.answer(
-        "👋 Premium obunaga xush kelibsiz!\nKerakli obuna muddatini tanlang va to‘lov kvitansiyasini yuboring:",
-        reply_markup={"keyboard": keyboard, "resize_keyboard": True}
+        "👋 Salom! Premium kanalga kirish uchun to‘lov qilishingiz kerak.\n\n"
+        "💳 *Humo karta*: 9860 0866 0355 0863\n"
+        "👤 Egasi: Rahimberganov Xushnudbek\n\n"
+        "✅ Pastdagi obunalardan birini tanlab to‘lov qilib, chekni yuboring.\n"
+        "Admin tekshiradi va tasdiqlasa sizga kanal linki keladi.",
+        reply_markup={"keyboard": keyboard, "resize_keyboard": True},
+        parse_mode="Markdown"
     )
 
 # --- HANDLE SUBSCRIPTION SELECTION ---
